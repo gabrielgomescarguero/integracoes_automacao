@@ -8,6 +8,12 @@ describe('Mocha’s interface', () => {
 
 
 describe('Products api', () => {
+
+  beforeEach(() => {
+    cy.login();
+  });
+
+  
   context('GET /produtos', () => {
       it('should return a list with all products', () => {
           cy.request({
